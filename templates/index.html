@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Resume Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="/static/css/newstyle.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Resume Page</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div class="row mb-5">
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-map-marker"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Address:</span> Bhilai Chhattisgarh</p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-phone"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Phone:</span> <a href="tel://8319809996">+91 8319809996</a></p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-paper-plane"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Email:</span> <a href="mailto:st18msd@gmail.com">st18msd7@gmail.com</a></p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-globe"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Website</span> <a href="#">mysite.com</a></p>
+				          </div>
+			          </div>
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col-md-7">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">Resume Form</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm" action="{% url 'resume' %}">
+										{% csrf_token %}
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Full Name</label>
+													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Email Address</label>
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Job Profile</label>
+													<input type="text" class="form-control" name="jobpro" id="jobpro" placeholder="Job Profile">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Mobile Number</label>
+													<input type="text" class="form-control" name="Mobile" id="mno" placeholder="Mobile Number">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Website</label>
+													<input type="link" class="form-control" name="website" id="website" placeholder="Website">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Skills (Any 5 seperate by ',')</label>
+													<input type="text" class="form-control" name="skills" id="skills" placeholder="Skills">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Percentage On Your Skills out of 100 (Any 5 seperate by ',')</label>
+													<input type="text" class="form-control" name="percentage" id="percentage" placeholder="Percentage">
+												</div>
+												<p class="label"><mark  style="color: rgb(211, 13, 13);">*School Education / Bachelor Education*</mark></p>
+											</div>
+											
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Year Of Completion</label>
+													<input type="text" class="form-control" name="yrs1" id="yrs1" placeholder="Year">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Name of Institute</label>
+													<input type="link" class="form-control" name="ins1" id="ins1" placeholder="Name of Institute">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Description</label>
+													<input type="text" class="form-control" name="firstdesc" id="firstdesc" placeholder="Description">
+												</div>
+												<p class="label"><mark  style="color: rgb(211, 13, 13);">*Higher Education / Master's*</mark></p>
+											</div>
+											
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Year Of Completion</label>
+													<input type="text" class="form-control" name="yrs2" id="yrs2" placeholder="Year">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Name of Institute</label>
+													<input type="link" class="form-control" name="ins2" id="ins2" placeholder="Name of Institute">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Description</label>
+													<input type="text" class="form-control" name="secdesc" id="secdesc" placeholder="Description">
+												</div>
+												<p class="label"><mark style="color: rgb(236, 162, 22);">*Experience*</mark></p>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Duration</label>
+													<input type="text" class="form-control" name="dur1" id="dur1" placeholder="Year">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Name of Company</label>
+													<input type="link" class="form-control" name="namecom1" id="namecom1" placeholder="Name of Company / Self">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Description</label>
+													<input type="text" class="form-control" name="exdesc1" id="exdesc1" placeholder="Description / Project">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Duration</label>
+													<input type="text" class="form-control" name="dur2" id="dur2" placeholder="Year">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Name of Company</label>
+													<input type="link" class="form-control" name="namecom2" id="namecom2" placeholder="Name of Company / Self">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Description</label>
+													<input type="text" class="form-control" name="exdesc2" id="exdesc2" placeholder="Description / Project">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Duration</label>
+													<input type="text" class="form-control" name="dur3" id="dur3" placeholder="Year">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Name of Company</label>
+													<input type="link" class="form-control" name="namecom3" id="namecom3" placeholder="Name of Company / Self">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Description</label>
+													<input type="text" class="form-control" name="exdesc3" id="exdesc3" placeholder="Description / Project">
+												</div>
+											</div>
+											<div class="col-md-8"> 
+												<div class="form-group">
+													<label class="label" for="text">Address</label>
+													<input type="text" class="form-control" name="address" id="address" placeholder="Address">
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="label" >Facebook</label>
+													<input type="link" class="form-control" name="facebook" id="facebook" placeholder="Facebook">
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="label" >Twitter</label>
+													<input type="link" class="form-control" name="twitter" id="twitter" placeholder="Twitter">
+												</div>
+											</div>
+											<div class="col-md-4"> 
+												<div class="form-group">
+													<label class="label" >Linkedin</label>
+													<input type="link" class="form-control" name="linkedin" id="linkedin" placeholder="Linkedin">
+												</div>
+											</div>
+											<div class="col-md-4"> 
+												<div class="form-group">
+													<label class="label" >Youtube</label>
+													<input type="link" class="form-control" name="youtube" id="youtube" placeholder="Youtube">
+												</div>
+											</div>										
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="#">About</label>
+													<textarea name="about" class="form-control" id="about" cols="30" rows="4" placeholder="About"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="POST" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-5 img" style="background-image: url(/static/images/img.jpg);">
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	</body>
+</html>
+

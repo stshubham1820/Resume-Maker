@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume {{data.new_name}}</title>
+	<link rel="stylesheet" href="/static/css/resume.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+</head>
+<body>
+<div class="resume"  id="resume">
+   <div class="resume_left">
+     <div class="resume_profile">
+       <img src="https://i.imgur.com/eCijVBe.png" alt="profile_pic">
+     </div>
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <div class="title">
+           <p class="bold">{{ data.new_name }}</p>
+           <p class="regular">{{ data.new_job }}</p>
+         </div>
+         <ul>
+           <li>
+             <div class="icon">
+               <i class="fas fa-map-signs"></i>
+             </div>
+             <div class="data">
+              {{ data.new_address }}
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-mobile-alt"></i>
+             </div>
+             <div class="data">
+              {{ data.new_mno }}
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-envelope"></i>
+             </div>
+             <div class="data">
+              {{ data.new_email }}
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-weebly"></i>
+             </div>
+             <div class="data">
+              {{ data.new_website }}
+             </div>
+           </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_skills">
+         <div class="title">
+           <p class="bold">skill's</p>
+         </div>
+         <ul>
+           <li>
+             <div class="skill_name">
+               {{ data.new_skills0 }}
+             </div>
+             <div class="skill_progress">
+               <span style="width:{{ data.new_percentage0 }} ;"></span>
+             </div>
+             <div class="skill_per">{{ data.new_percentage0 }}</div>
+           </li>
+           <li>
+             <div class="skill_name">
+              {{ data.new_skills1 }} 
+             </div>
+             <div class="skill_progress">
+               <span style="width: {{ data.new_percentage1 }};"></span>
+             </div>
+             <div class="skill_per">{{ data.new_percentage1 }}</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               {{  data.new_skills2 }}
+             </div>
+             <div class="skill_progress">
+               <span style="{{ data.new_percentage2 }};"></span>
+             </div>
+             <div class="skill_per">{{ data.new_percentage2 }}</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               {{ data.new_skills3 }}
+             </div>
+             <div class="skill_progress">
+               <span style="width: {{ data.new_percentage3 }};"></span>
+             </div>
+             <div class="skill_per">{{ data.new_percentage3 }}</div>
+           </li>
+           <li>
+             <div class="skill_name">
+              {{ data.new_skills4 }}
+             </div>
+             <div class="skill_progress">
+               <span style="width: {{ data.new_percentage4 }};"></span>
+             </div>
+             <div class="skill_per">{{ data.new_percentage4 }}</div>
+           </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold">Social</p>
+         </div>
+         <ul>
+           <li>
+             <div class="data">
+               <p class="semi-bold">Facebook</p>
+               <p>{{ data.new_facebook }}@facebook</p>
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               <p class="semi-bold">Twitter</p>
+               <p>{{ data.new_twitter }}@twitter</p>
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               <p class="semi-bold">Youtube</p>
+               <p>{{ data.new_youtube }}@youtube</p>
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               <p class="semi-bold">Linkedin</p>
+               <p>{{ data.new_linkedin }}@linkedin</p>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </div>
+  </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+           <p class="bold">About us</p>
+         </div>
+        <p>{{data.new_about}}</p>
+    </div>
+    <div class="resume_item resume_work">
+        <div class="title">
+           <p class="bold">Work Experience</p>
+         </div>
+        <ul>
+            <li>
+                <div class="date">{{ data.new_dur1 }}</div> 
+                <div class="info">
+                     <p class="semi-bold">{{ data.new_namecom1 }}</p> 
+                  <p>{{ data.new_exdesc1 }}</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">{{ data.new_dur2 }}</div>
+              <div class="info">
+                     <p class="semi-bold">{{ data.new_namecom2 }}</p> 
+                  <p>{{ data.new_exdesc2 }}</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">{{ data.new_dur2 }}</div>
+              <div class="info">
+                     <p class="semi-bold">{{ data.new_namecom3 }}</p> 
+                  <p>{{ data.new_exdesc3 }}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="resume_item resume_education">
+      <div class="title">
+           <p class="bold">Education</p>
+         </div>
+      <ul>
+            <li>
+                <div class="date">{{ data.new_yrs1 }}</div> 
+                <div class="info">
+                     <p class="semi-bold">{{ data.new_ins1 }}</p> 
+                  <p>{{ data.new_firstdesc }}</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">{{ data.new_yrs2 }}</div>
+              <div class="info">
+                     <p class="semi-bold">{{ data.new_ins2 }}</p> 
+                  <p>{{ data.new_secdesc }}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="resume_item resume_hobby">
+      <div class="title">
+           <p class="bold">Social Media</p>
+         </div>
+       <ul>
+         <li><i class="fab fa-facebook-square"></i></li>
+         <li><i class="fab fa-linkedin"></i></li>
+         <li><i class="fab fa-youtube"></i></li>
+         <li><i class="fab fa-twitter-square"></i></li>
+      </ul>
+    </div>
+    <div class="col-md-6 text-right mb-3">
+      <button type="button" class="btn btn-primary" id="download" style="padding: 5px; margin-top: 10px; float: right;"> Download PDF </button>
+    </div>
+    <script>
+      window.onload = function(){
+        document.getElementById("download").addEventListener("click",()=>{
+          const resume = this.document.getElementById("resume");
+          html2pdf().from(resume).save();
+        })
+      }
+    </script>
+  </div>
+</div>
+</body>
+</html>
